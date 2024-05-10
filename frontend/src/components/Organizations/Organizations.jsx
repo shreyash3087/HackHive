@@ -12,23 +12,23 @@ export default function Organizations() {
     <div className="organizations">
       <p>Trusted by worlds leading organization</p>
       <div className="orgs">
-        <a href="">
-          <img src={image7} alt="" />
+        <a href="https://about.meta.com/">
+          <img src={image7} alt="meta" />
         </a>
-        <a href="">
-          <img src={image8} alt="" />
+        <a href="https://aws.amazon.com/">
+          <img src={image8} alt="amazon" />
         </a>
-        <a href="">
-          <img src={image9} alt="" />
+        <a href="https://squareup.com/us/en">
+          <img src={image9} alt="squareup" />
         </a>
-        <a href="">
-          <img src={image10} alt="" />
+        <a href="https://www.atlassian.com/">
+          <img src={image10} alt="atlassian" />
         </a>
-        <a href="">
-          <img src={image11} alt="" />
+        <a href="https://about.google/intl/ALL_in/">
+          <img src={image11} alt="google" />
         </a>
-        <a href="">
-          <img src={image12} alt="" />
+        <a href="https://www.okta.com/">
+          <img src={image12} alt="okta" />
         </a>
       </div>
     </div>
