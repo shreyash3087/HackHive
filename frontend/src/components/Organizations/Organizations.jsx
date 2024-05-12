@@ -8,7 +8,7 @@ import image12 from "../../assets/image 12.png";
 
 export default function Organizations() {
   return (
-    <div className="text-black font-[Nunito]  font-medium text-[19px] leading-normal tracking-wide w-auto mx-16 my-1vw mb-4vw">
+    <div className="text-black font-Nunito  font-medium text-[19px] leading-normal tracking-wide w-auto mx-16 my-1vw mb-4vw">
       <p className="mb-0.8vw">Trusted by world's leading organizations</p>
       <div className="flex justify-around items-center border border-black rounded-lg w-80vw h-5vw mx-auto p-10px">
         <a href="">

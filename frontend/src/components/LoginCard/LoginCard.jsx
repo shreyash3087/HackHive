@@ -4,8 +4,8 @@ import { FcGoogle } from "react-icons/fc";
 
 const LoginCard = () => {
   return (
-    <div className="w-[500px] rounded-2xl absolute top-[20vh] left-[10vw] p-0 border-gray-400 border-[1px] font-[Nunito]  ">
-      <div className="bg-[#1e78ff3e] text-[48px] font-semibold text-center rounded-t-2xl font-[Nunito]  ">
+    <div className="w-[500px] rounded-2xl absolute top-[20vh] left-[10vw] p-0 border-gray-400 border-[1px] font-Nunito  ">
+      <div className="bg-[#1e78ff3e] text-[48px] font-semibold text-center rounded-t-2xl font-Nunito  ">
         Login
       </div>
       <div>
