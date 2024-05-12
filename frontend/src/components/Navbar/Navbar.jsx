@@ -21,7 +21,7 @@ export default function Navbar() {
           <a href="">Projects</a>
         </li>
         <li>
-          <a href="">Blog</a>
+          <a href="/blogs">Blog</a>
         </li>
       </div>
       <div className="flex items-center m-auto space-x-6 mr-32">
