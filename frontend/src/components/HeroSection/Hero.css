@@ -19,9 +19,11 @@
     line-height: normal;
     letter-spacing: 1.56px;
     width: 40vw;
+    
 }
 .hero-text h1 span{
-    font-weight: 600;
+    font-weight: 900;
+  
 }
 
 .hero-img {
