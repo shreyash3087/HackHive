@@ -157,6 +157,28 @@ Pulling from Your Remote
 $ git pull upstream main
 ```
 
+### Steps for Installation
+
+#### Frontend
+
+- Go inside `frontend` directory and install the required dependancies with following command :
+
+```bash
+npm install
+```
+
+- After that run the following command before starting to contribute to project :
+
+```bash
+npm run prepare
+```
+
+- Now start the project locally with command :
+
+```bash
+npm run dev
+```
+
 ## Design
 
 The Prospective design of this project is here [HackHive](https://www.figma.com/file/Ak0vaM2cMhqIWBzgkU8BmE/Untitled?type=design&node-id=0%3A1&mode=design&t=GzaRlGrkVNpEdTId-1)
