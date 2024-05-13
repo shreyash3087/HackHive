@@ -1,35 +1,35 @@
 .hero {
-  height: 25vw;
-  display: flex;
-  justify-content: space-between;
-  width: 80vw;
-  margin: 1vw auto;
+	height: 25vw;
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	align-items: center;
 }
 
 .hero-text {
-  margin: auto 0;
+	margin: auto 0;
 }
 
 .hero-text h1 {
-  color: #000;
-  font-family: "Nunito Sans";
-  font-size: 45px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: 1.56px;
-  width: 40vw;
+	color: #000;
+	font-family: "Nunito Sans";
+	font-size: 45px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	letter-spacing: 1.56px;
+	width: 40vw;
 }
 .hero-text h1 span {
-  font-weight: 900;
+	font-weight: 900;
 }
 
 .hero-img {
-  /* height: 20vw;
+	/* height: 20vw;
     width: 35vw; */
-  margin: auto 0;
+	margin: auto 0;
 }
 .hero-img img {
-  height: 20vw;
-  width: 30vw;
+	height: 20vw;
+	width: 30vw;
 }
