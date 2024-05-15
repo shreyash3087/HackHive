@@ -1,0 +1,13 @@
+.env
+.env.*
+*.html
+*.json
+*.md
+*.config.js
+.gitignore
+.eslintrc.cjs
+LICENSE
+../scraper/
+../server/
+.github
+node_modules
