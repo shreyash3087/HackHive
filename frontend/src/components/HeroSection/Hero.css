@@ -1,35 +1,40 @@
 .hero {
-	height: 25vw;
-	display: flex;
-	justify-content: space-around;
-	width: 100%;
-	align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  background: #f9fafb; /* Default background color */
 }
 
 .hero-text {
-	margin: auto 0;
+  padding-bottom: 2rem;
 }
 
 .hero-text h1 {
-	color: #000;
-	font-family: "Nunito Sans";
-	font-size: 45px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: normal;
-	letter-spacing: 1.56px;
-	width: 40vw;
-}
-.hero-text h1 span {
-	font-weight: 900;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 
-.hero-img {
-	/* height: 20vw;
-    width: 35vw; */
-	margin: auto 0;
+.hero-text h1 span {
+  color: #3b82f6; /* Tailwind blue color */
 }
+
 .hero-img img {
-	height: 20vw;
-	width: 30vw;
+  max-width: 100%;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .hero-text {
+    margin-bottom: 0;
+    margin-right: 2rem;
+    font-size: 2.5rem;
+  }
 }

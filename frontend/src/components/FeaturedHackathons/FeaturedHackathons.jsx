@@ -34,36 +34,37 @@ const FeaturedHackathons = () => {
   }, []);
 
   return (
-    <div className="flex flex-wrap justify-center items-center p-10 dark:bg-gradient-bg-4 gap-3">
+    <div className="flex flex-wrap justify-center items-center p-4 sm:p-10 dark:bg-gradient-bg-4 gap-3">
       {Array.isArray(hackathons) &&
         hackathons.map((hackathon, index) =>
-          hackathon.featured == true ? (
+          hackathon.featured === true ? (
             <div
-              className={`items-center p-4 w-[33vw] shadow-lg flex border ${cardColorTheme[index % cardColorTheme.length]} border-t-[15px] border-l-0 border-r-0 border-b-0 rounded-md m-3 hover:scale-[1.01]`}
+              className={`items-center p-4 w-full sm:w-[48%] md:w-[33%] lg:w-[24%] shadow-lg flex flex-col sm:flex-row border ${cardColorTheme[index % cardColorTheme.length]} border-t-[15px] border-l-0 border-r-0 border-b-0 rounded-md m-3 hover:scale-[1.01]`}
               key={hackathon._id}
             >
-              <div>
+              <div className="flex-col items-center w-full sm:w-[40%]">
                 {/* Image */}
-                <div className="flex-col items-center w-[80%]">
-                  {hackathon.image ? (
-                    <img
-                      className="w-[200px] h-[200px] object-contain"
-                      src={hackathon.image}
-                    />
-                  ) : (
-                    <img
-                      className="w-[200px] h-[200px] object-contain"
-                      src={placeholderImage}
-                    />
-                  )}
-                </div>
+                {hackathon.image ? (
+                  <img
+                    className="w-full h-40 sm:w-[200px] sm:h-[200px] object-contain"
+                    src={hackathon.image}
+                  />
+                ) : (
+                  <img
+                    className="w-full h-40 sm:w-[200px] sm:h-[200px] object-contain"
+                    src={placeholderImage}
+                  />
+                )}
+              </div>
+              <div className="flex flex-col gap-1 w-full sm:w-[60%] mt-4 sm:mt-0">
+                {/* Name */}
+                <h1 className="text-xl font-bold">{hackathon.name}</h1>
                 {/* Date and prize*/}
-                <div>
+                <div className="flex flex-col">
                   <p className="flex-col gap-1">
                     <span className="py-1 px-2 text-lg font-bold">
                       {hackathon.status}
                     </span>
-                    <br></br>
                     <span className="py-1 px-2 text-xs">
                       <FontAwesomeIcon
                         icon={faCalendarDays}
@@ -72,8 +73,6 @@ const FeaturedHackathons = () => {
                       />
                       {hackathon.date}
                     </span>
-                    <br></br>
-                    {/* {Prize} */}
                     {hackathon.prizes === 'None' ||
                     hackathon.prizes === 0 ? null : (
                       <span className="py-1 px-2 text-xs">
@@ -87,19 +86,6 @@ const FeaturedHackathons = () => {
                     )}
                   </p>
                 </div>
-              </div>
-              <div className=" flex flex-col gap-1 w-[70%]">
-                {/* Name */}
-                <h1 className="text-xl font-bold">{hackathon.name}</h1>
-                {/* Date */}
-                {/* <p className='text-lg flex gap-1'>
-									<span className='text-green-500  bg-green-500/50 py-1 px-2 rounded-md'>
-										{hackathon.date}
-									</span>
-									<span className='text-purple-500 bg-purple-500/50 py-1 px-2 rounded-md'>
-										{hackathon.status}
-									</span>
-								</p> */}
                 <p className="pb-4">
                   <FontAwesomeIcon
                     icon={faGlobe}
@@ -110,7 +96,6 @@ const FeaturedHackathons = () => {
                 </p>
                 {/* Themes */}
                 <div className="flex flex-wrap items-stretch justify-evenly py-1 gap-1 border rounded-md bg-cyan-200">
-                  {/* <span className="text-blue-500 py-1">Themes :</span> */}
                   {hackathon.themes.map((theme, key) => (
                     <span
                       key={key}
@@ -120,14 +105,8 @@ const FeaturedHackathons = () => {
                     </span>
                   ))}
                 </div>
-                {/* Location */}
-                <div className="flex gap-1 self-end">
-                  {/* <p className='  text-red-500 bg-red-500/50 rounded-md py-1 px-2'>
-										{hackathon.location}
-									</p> */}
-
-                  {/* Participants */}
-                  <p className="text-sm pt-5 px-2 ">
+                <div className="flex flex-col sm:flex-row gap-1 self-end">
+                  <p className="text-sm pt-5 px-2">
                     <FontAwesomeIcon
                       icon={faUserGroup}
                       style={{ color: '#a1a1a1' }}
@@ -136,17 +115,8 @@ const FeaturedHackathons = () => {
                     {hackathon.participants} Participants
                   </p>
                 </div>
-
-                {/* {Prize} */}
-                {/* {hackathon.prizes === 'None' ||
-                hackathon.prizes === 0 ? null : (
-                  <p className="text-lg font-bold text-green-500">
-                    Prize: {hackathon.prizes}
-                  </p>
-                )} */}
-                {/* Link */}
                 <a
-                  className="bg-blue-500 p-3 text-white text-center rounded-lg"
+                  className="bg-blue-500 p-3 text-white text-center rounded-lg mt-2 sm:mt-0"
                   href={hackathon.link}
                 >
                   Apply Now
@@ -159,7 +129,7 @@ const FeaturedHackathons = () => {
         onClick={() => {
           navigate('/hackathons');
         }}
-        className="justify-center items-center gap-4 text-[16px] text-blue-500 border border-[#1E78FF] hover:bg-blue-500 hover:text-white m-auto duration-300 py-2 px-2 mt-10 w-[430px] mx-auto rounded-lg dark:bg-white dark:hover:bg-blue-500"
+        className="justify-center items-center gap-4 text-[16px] text-blue-500 border border-[#1E78FF] hover:bg-blue-500 hover:text-white m-auto duration-300 py-2 px-2 mt-10 w-full sm:w-[430px] mx-auto rounded-lg dark:bg-white dark:hover:bg-blue-500"
       >
         Load More
       </button>

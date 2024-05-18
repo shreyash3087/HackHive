@@ -7,61 +7,49 @@ import whatsapp from "../../assets/whatsapp_icon.svg";
 import facebook from "../../assets/facebook_icon.svg";
 import twitter from "../../assets/twitter_icon.svg";
 
-export default function Footer() {
+export default function Footer({darkMode}) {
 	return (
-		<div className='flex flex-wrap justify-between h-1/4 pt-8 bg-blue-400 bg-opacity-20 dark:bg-[#5a5d77]'>
-			<div className='left relative left-16 mb-20 flex flex-col space-y-4'>
-				<div className=''>
-					<a href=''>
-						<img src={logo} alt='' />
-					</a>
-					<div className='flex items-center mt-4'>
-						<img src={copyright} />
-						<span className='text-gray-600  font-[Nunito] text-[14.96px] dark:text-white'>
-							copyright 2024, HackHive
-						</span>
-					</div>
+		<div className='flex flex-wrap justify-between p-8 bg-blue-400 bg-opacity-20 dark:bg-[#5a5d77]'>
+			<div className='flex flex-col space-y-4 mb-10 w-full md:w-auto'>
+				<a href='' className={`mb-4 ${darkMode ? "invert" : ""}`}>
+					<img src={logo} alt='HackHive logo' />
+				</a>
+				<div className='flex items-center'>
+					<img src={copyright} alt='Copyright icon' />
+					<span className='text-gray-600 font-[Nunito] text-[14.96px] dark:text-white'>
+						copyright 2024, HackHive
+					</span>
 				</div>
 				<div>
-					<h1 className='dark:text-white text-black font-bold font-[Nunito] text-[48px]  backdrop:text-[48px] leading-normal tracking-wider '>
+					<h1 className='dark:text-white text-black font-bold font-[Nunito] text-[32px] md:text-[48px] leading-normal tracking-wider'>
 						Empowering{" "}
-						<span className='text-blue-500 font-sans '>Innovators</span>,
+						<span className='text-blue-500 font-sans'>Innovators</span>,
 					</h1>
-					<h1 className=' dark:text-white text-black font-bold font-[Nunito] text-[48px] leading-normal tracking-wider  '>
+					<h1 className='dark:text-white text-black font-bold font-[Nunito] text-[32px] md:text-[48px] leading-normal tracking-wider'>
 						Elevating{" "}
-						<span className='text-orange-400 font-[Roboto] '>Software</span>.
+						<span className='text-orange-400 font-[Roboto]'>Software</span>.
 					</h1>
 				</div>
-				<div className='flex items-center space-x-2 w-[207px] h-[35px] p-1 gap-1'>
-					<a
-						href=''
-						className='border border-black rounded-full p-1 dark:bg-white'>
-						<img src={insta} alt='' className='w-[13.6px] h-[14px]' />
+				<div className='flex space-x-2'>
+					<a href='' className='border border-black rounded-full p-1 dark:bg-white'>
+						<img src={insta} alt='Instagram icon' className='w-[13.6px] h-[14px]' />
 					</a>
-					<a
-						href=''
-						className='border border-black rounded-full p-1 dark:bg-white'>
-						<img src={linkedin} alt='' className='w-[20px] h-[20px]' />
+					<a href='' className='border border-black rounded-full p-1 dark:bg-white'>
+						<img src={linkedin} alt='LinkedIn icon' className='w-[20px] h-[20px]' />
 					</a>
-					<a
-						href=''
-						className='border border-black rounded-full p-1 dark:bg-white'>
-						<img src={whatsapp} alt='' className='w-[19.9px] h-[20px]' />
+					<a href='' className='border border-black rounded-full p-1 dark:bg-white'>
+						<img src={whatsapp} alt='WhatsApp icon' className='w-[19.9px] h-[20px]' />
 					</a>
-					<a
-						href=''
-						className='border border-black rounded-full p-1 dark:bg-white'>
-						<img src={facebook} alt='' className='w-[20px] h-[19.5px]' />
+					<a href='' className='border border-black rounded-full p-1 dark:bg-white'>
+						<img src={facebook} alt='Facebook icon' className='w-[20px] h-[19.5px]' />
 					</a>
-					<a
-						href=''
-						className='border border-black rounded-full p-1 dark:bg-white'>
-						<img src={twitter} alt='' className='w-[13.6px] h-[14px]' />
+					<a href='' className='border border-black rounded-full p-1 dark:bg-white'>
+						<img src={twitter} alt='Twitter icon' className='w-[13.6px] h-[14px]' />
 					</a>
 				</div>
 			</div>
-			<div className='right flex relative mr-12 ml-8 mb-10 pr-10'>
-				<div className='mx-12 space-y-3'>
+			<div className='flex flex-wrap justify-center md:justify-end w-full md:w-auto'>
+				<div className='mx-6 mb-6 md:mb-0'>
 					<h1 className='text-gray-600 font-semibold font-[Nunito] text-[18px] dark:text-white'>
 						COMMUNITY
 					</h1>
@@ -72,20 +60,20 @@ export default function Footer() {
 						<p>Brand Assets</p>
 					</div>
 				</div>
-				<div className='mx-12 space-y-3'>
+				<div className='mx-6 mb-6 md:mb-0'>
 					<h1 className='text-gray-600 font-semibold font-[Nunito] text-[18px] dark:text-white'>
 						COMPANY
 					</h1>
-					<div className='space-y-1.5 text-gray-600 text-[18px] font-[Nunito] dark:text-white'>
+					<div className='space-y-1.5 text-gray-600 font-[Nunito] dark:text-white'>
 						<p>About</p>
 						<p>Jobs</p>
 						<p>Blogs</p>
-						<p>Changeloge</p>
+						<p>Changelog</p>
 						<p>Privacy</p>
 						<p>Terms</p>
 					</div>
 				</div>
-				<div className='mx-12 space-y-3'>
+				<div className='mx-6'>
 					<h1 className='text-gray-600 font-semibold font-[Nunito] text-[18px] dark:text-white'>
 						SUPPORT
 					</h1>
