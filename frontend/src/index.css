@@ -2,6 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
+
+:root{
+    font-family: "Nunito Sans";
+}
+
+/* Styles for custom scrollbar with linear gradient */
+/* Width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #fff; /* fallback color */
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    
+    background: linear-gradient(to bottom, rgb(37, 150, 190), rgb(138,114,244));
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3B82F6;
+  }
+  
 :root {
   font-family: "Nunito Sans";
 }
+
