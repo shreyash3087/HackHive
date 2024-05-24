@@ -1,90 +1,78 @@
+import { FaWhatsapp, FaInstagram, FaLinkedinIn, FaTwitter, FaFacebook } from "react-icons/fa";
 import React from "react";
 import logo from "../../assets/logo.svg";
-import copyright from "../../assets/copyright_icon.svg";
-import insta from "../../assets/instagram_icon.svg";
-import linkedin from "../../assets/linkedin_icon.svg";
-import whatsapp from "../../assets/whatsapp_icon.svg";
-import facebook from "../../assets/facebook_icon.svg";
-import twitter from "../../assets/twitter_icon.svg";
 
 export default function Footer({darkMode}) {
-	return (
-		<div className='flex flex-wrap justify-between p-8 bg-blue-400 bg-opacity-20 dark:bg-[#5a5d77]'>
-			<div className='flex flex-col space-y-4 mb-10 w-full md:w-auto'>
-				<a href='' className={`mb-4 ${darkMode ? "invert" : ""}`}>
-					<img src={logo} alt='HackHive logo' />
-				</a>
-				<div className='flex items-center'>
-					<img src={copyright} alt='Copyright icon' />
-					<span className='text-gray-600 font-[Nunito] text-[14.96px] dark:text-white'>
-						copyright 2024, HackHive
-					</span>
-				</div>
-				<div>
-					<h1 className='dark:text-white text-black font-bold font-[Nunito] text-[32px] md:text-[48px] leading-normal tracking-wider'>
-						Empowering{" "}
-						<span className='text-blue-500 font-sans'>Innovators</span>,
-					</h1>
-					<h1 className='dark:text-white text-black font-bold font-[Nunito] text-[32px] md:text-[48px] leading-normal tracking-wider'>
-						Elevating{" "}
-						<span className='text-orange-400 font-[Roboto]'>Software</span>.
-					</h1>
-				</div>
-				<div className='flex space-x-2'>
-					<a href='' className='border border-black rounded-full p-1 dark:bg-white'>
-						<img src={insta} alt='Instagram icon' className='w-[13.6px] h-[14px]' />
-					</a>
-					<a href='' className='border border-black rounded-full p-1 dark:bg-white'>
-						<img src={linkedin} alt='LinkedIn icon' className='w-[20px] h-[20px]' />
-					</a>
-					<a href='' className='border border-black rounded-full p-1 dark:bg-white'>
-						<img src={whatsapp} alt='WhatsApp icon' className='w-[19.9px] h-[20px]' />
-					</a>
-					<a href='' className='border border-black rounded-full p-1 dark:bg-white'>
-						<img src={facebook} alt='Facebook icon' className='w-[20px] h-[19.5px]' />
-					</a>
-					<a href='' className='border border-black rounded-full p-1 dark:bg-white'>
-						<img src={twitter} alt='Twitter icon' className='w-[13.6px] h-[14px]' />
-					</a>
-				</div>
-			</div>
-			<div className='flex flex-wrap justify-center md:justify-end w-full md:w-auto'>
-				<div className='mx-6 mb-6 md:mb-0'>
-					<h1 className='text-gray-600 font-semibold font-[Nunito] text-[18px] dark:text-white'>
-						COMMUNITY
-					</h1>
-					<div className='space-y-1.5 text-gray-600 font-[Nunito] dark:text-white'>
-						<p>Organize a hackathon</p>
-						<p>Explore hackathons</p>
-						<p>Code of conduct</p>
-						<p>Brand Assets</p>
-					</div>
-				</div>
-				<div className='mx-6 mb-6 md:mb-0'>
-					<h1 className='text-gray-600 font-semibold font-[Nunito] text-[18px] dark:text-white'>
-						COMPANY
-					</h1>
-					<div className='space-y-1.5 text-gray-600 font-[Nunito] dark:text-white'>
-						<p>About</p>
-						<p>Jobs</p>
-						<p>Blogs</p>
-						<p>Changelog</p>
-						<p>Privacy</p>
-						<p>Terms</p>
-					</div>
-				</div>
-				<div className='mx-6'>
-					<h1 className='text-gray-600 font-semibold font-[Nunito] text-[18px] dark:text-white'>
-						SUPPORT
-					</h1>
-					<div className='space-y-1.5 text-gray-600 font-[Nunito] dark:text-white'>
-						<p>Help</p>
-						<p>Refund Policy</p>
-						<p>Status</p>
-						<p>Contact Us</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	);
-}
+
+    const Year = new Date().getFullYear();
+
+    return (
+        <div className="relative" >
+            <div className="absolute top-0 left-0 w-[100%] overflow-hidden bg-blue-200 dark:bg-[#8e8fa8] dark:bg-opacity-100 ">
+                <div style= {{justifyContent: 'center' }} className='flex space-y-4  w-full md:w-auto '>
+				    <a href='' className={` mb-4 ${darkMode ? "invert" : ""} `}>
+					    <img className='flex justify-content-center p-4' src={logo} alt='HackHive logo' />
+				    </a>
+                </div>
+                <div style={{display: 'flex' , justifyContent: 'space-between' }} className="lg:flex lg:justifyContent-space-between grid  lg:grid-cols-4 gap-1 lg:ml-20 lg:mr-20 md:ml-10 md:mr-10 sm:grid-cols-1 sm:flex " >
+                    <div>
+                        <div style= {{display: 'flex' , justifyContent: 'center' }} className="flex ">
+                            <h2 className="text-[26px] text-black-500">
+                            <b>EMPOWERING Innovators <br/> ELEVATING Softwares </b>
+                            </h2>
+                        </div>
+                        <br/>
+                        <li className="text-[28px] list-none font-semibold text-blue-500 py-1 uppercase">
+                            Contact Us</li>
+                            <div className="flex space-x-4">
+                            <a style={{fontSize: "5vh"}} className="text-black hover:text-blue-500 transform hover:scale-150 
+                            transition-all duration-150 ease-in-out" href=""> <FaWhatsapp />
+                            </a>
+                            <a  style={{fontSize: "5vh"}} className="text-black hover:text-blue-500 transform hover:scale-150
+                             transition-all duration-150 ease-in-out" href="">  <FaLinkedinIn />
+                            </a>
+                            <a  style={{fontSize: "5vh"}}className="text-black hover:text-blue-500 transform hover:scale-150
+                             transition-all duration-150 ease-in-out" href=""> <FaTwitter />
+                            </a>
+                            <a style={{fontSize: "5vh"}} className="text-black hover:text-blue-500 transform hover:scale-150
+                             transition-all duration-150 ease-in-out" href=""> <FaInstagram />
+                            </a>
+                            <a style={{fontSize: "5vh"}} className="text-black hover:text-blue-500 transform hover:scale-150
+                             transition-all duration-150 ease-in-out" href=""> <FaFacebook />
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <li className="text-[22px] list-none font-semibold text-blue-500  uppercase ">
+                            Community
+                        </li>
+                        <li className="my-4 list-none">Organize a Hackathons</li>
+                        <li className="my-4 list-none">Explore Hackathons</li>
+                        <li className="my-4 list-none">Code of conduct</li>
+                        <li className="my-4 list-none">Brand Assests</li>
+                    </div>
+
+                    <div>
+                        <li className="text-[22px] list-none font-semibold text-blue-500  uppercase">
+                            Company</li>
+                        <li className="my-4 list-none">About Us</li>
+                        <li className="my-4 list-none">Career</li>
+                        <li className="my-4 list-none">Blogs</li>
+                        <li className="my-4 list-none">Changelog</li>
+                        <li className="my-4 list-none">Privacy & Terms </li>
+                    </div>
+                    <div className="mb-4 md:mb-0">
+                        <h2 className="text-[22px] font-semibold text-blue-500  uppercase">Support</h2>
+                        <p className="text-[16px] my-4">Help</p>
+                        <p className="text-[16px] my-4">Refund Policy</p>
+                        <p className="text-[16px] my-4">Status</p>
+
+                    </div>
+                </div>
+                <h6 className="text-center font-bold">&copy; Copyright {Year} Hackhive</h6>
+            </div>
+        </div>
+    );
+};
+
